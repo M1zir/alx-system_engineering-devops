@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo chown -R vincent:staff *
+for file in pwd; do chown vincent:staff "$file"
