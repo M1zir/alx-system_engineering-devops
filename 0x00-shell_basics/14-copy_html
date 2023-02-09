@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -name ".html" -newerBt $(find .. -name ".html" -printf "%T@\n" | sort | tail -1) -exec cp {} .. 
+cp *.html .. 
