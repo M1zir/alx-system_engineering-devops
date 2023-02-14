@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(echo $WATER + $STIR | dc) | awk '{ printf("ibase=10;obase=bestchol;%s\n", $0) }' | dc
+(echo "obase=10;(($WATER)+($STIR))" | tr '[:lower:]' '[:upper:]' | dc) | xargs printf "ibase=10;obase=bestchol;%d\n" | tr '[:lower:]' '[:upper:]' | dc
