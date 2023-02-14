@@ -1,3 +1,2 @@
 #!/bin/bash
 (echo "ibase=water" | tr '[:lower:]' '[:upper:]' | xargs -I{} echo "{}+$WATER+$STIR") | dc | tr '[:lower:]' '[:upper:]' | xargs -I{} echo "ibase=10" "{}" "obase=bestchol" | tr '[:lower:]' '[:upper:]' | xargs -I{} echo "{}" | dc
-
