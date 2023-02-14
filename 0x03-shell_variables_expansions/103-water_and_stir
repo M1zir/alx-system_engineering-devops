@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "obase=10;(($WATER)+($STIR))" | tr '[:lower:]' '[:upper:]' | dc | printf "ibase=10\nobase=bestchol\n%d\n" $(cat) | tr '[:lower:]' '[:upper:]' | dc
+echo "obase=10 (($WATER)+($STIR))" | tr '[:lower:]' '[:upper:]' | dc | printf "ibase=10\nobase=bestchol\n%d\n" $(cat) | tr '[:lower:]' '[:upper:]' | dc
