@@ -1,2 +1,3 @@
 #!/bin/bash
-echo "obase=10 (($WATER)+($STIR))" | tr '[:lower:]' '[:upper:]' | dc | printf "ibase=10\nobase=bestchol\n%d\n" $(cat) | tr '[:lower:]' '[:upper:]' | dc
+(echo "ibase=water" | tr '[:lower:]' '[:upper:]' | xargs -I{} echo "{}+$WATER+$STIR") | dc | tr '[:lower:]' '[:upper:]' | xargs -I{} echo "ibase=10" "{}" "obase=bestchol" | tr '[:lower:]' '[:upper:]' | xargs -I{} echo "{}" | dc
+
